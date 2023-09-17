@@ -27,12 +27,6 @@ nnoremap J gT
 nnoremap K gt
 " merge line below into the current line by pressing M (default is J)
 nnoremap M J
-" complete curly brackets after typing { Enter
-inoremap {<CR> {<CR>}<C-o>O
-" type ;e to insert an environment written at the current line
-inoremap ;e <Esc>^v$hdi\begin{}<Esc>Po\end{}<Esc>PO
-" type ;l in normal mode to add \left \right to () or []
-nnoremap ;l i\left<Esc>l%i\right<Esc>l%
 " move visually naturally when holding Control
 nnoremap <C-h> h
 nnoremap <C-j> gj
@@ -41,14 +35,4 @@ nnoremap <C-l> l
 " Type Control y to copy visual selection to system clipboard
 vmap <C-y> "*y
 
-" compile latex on write
-autocmd BufWritePost *.tex silent! execute "!latexmk -xelatex -pdf % ; latexmk -c" | redraw!
-" comment out visually selected block by pressing {{, uncomment by pressing }}
-autocmd Filetype c,cc,cpp let b:comment_prefix = '// '
-autocmd Filetype python let b:comment_prefix = '# '
-autocmd Filetype tex let b:comment_prefix = '% '
-vnoremap {{ <Esc>'<<C-v>'>I<C-r>=b:comment_prefix<Enter><Esc>
-vnoremap }} <Esc>'<<C-v>'>wgeld
-
-let g:tex_indent_items=0 " disable annoying itemize autoindentations in latex
 let g:python_highlight_all = 1 " enhance python syntax highlighting
