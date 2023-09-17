@@ -13,8 +13,6 @@ set shiftwidth=4 " set the size of an indent in spaces
 set expandtab " convert inserted tab to spaces (for horizontal scrolling)
 set autoindent " set automatic indentation
 set backspace=eol,indent,start " backspace on ln brks, autoindnts, before insert
-set updatetime=100 " make GitGutter update more frequently
-set signcolumn=yes " always show sign column
 
 " type Control C to escape from insert mode
 imap <C-c> <Esc>
