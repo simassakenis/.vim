@@ -59,9 +59,3 @@ call s:h("Operator", s:black, "") " operators ('=', '<')
 call s:h("PreProc", s:blue, "") " preprocessors ('import', '#include')
 call s:h("Type", s:yellow, "") " types ('int', 'char')
 call s:h("Special", s:green, "") " special symbols ('\n' in strings)
-
-" GitGutter (git status indicators to the left of each line)
-call s:h("GitGutterAdd", s:green, "") " '+' for newly added
-call s:h("GitGutterDelete", s:red, "") " '-' for deleted
-call s:h("GitGutterChange", s:yellow, "") " '~' for modified
-call s:h("GitGutterChangeDelete", s:red, "") " '~_' for modified + deleted below
