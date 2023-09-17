@@ -33,7 +33,7 @@ inoremap {<CR> {<CR>}<C-o>O
 inoremap ;e <Esc>^v$hdi\begin{}<Esc>Po\end{}<Esc>PO
 " type ;l in normal mode to add \left \right to () or []
 nnoremap ;l i\left<Esc>l%i\right<Esc>l%
-" move visually naturally when holging Control
+" move visually naturally when holding Control
 nnoremap <C-h> h
 nnoremap <C-j> gj
 nnoremap <C-k> gk
